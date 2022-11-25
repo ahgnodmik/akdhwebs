@@ -1,0 +1,163 @@
+@import url(./reset.css);
+:root {
+  --white: #fff;
+  --black: #000;
+  --black-40: #404040;
+  /* web flat coler*/
+  /* blue coler*/
+  --blue-sky: #4FC3F7;
+  --blue-deep: #1A237E;
+  --blue-see: #0D47A1;
+  --blue-standard: #1E88E5;
+  /* red coler*/
+  --red-standard: #F44336;
+  --red-deep: #B71C1C;
+  --red-light: #EF5350;
+  /* orange coler*/
+  --orenage-standard: #FF9800;
+  --orange-deep: #FF6F00;
+  --orange-light: #FFD54F;
+  /* purple coler*/
+  --purple-standard: #9C27B0;
+  --purple-light: #CE93D8;
+  --purple-deep: #4A148C;
+  /* yellow coler*/
+  --yellow-standard: #FFEB3B;
+  --yellow-light: #FFF176;
+  --yellow-deep: #FBC02D;
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 16px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar li {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #404040;
+}
+.nav-bar li:hover {
+  color: var(--red-deep);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.nav-bar li:after {
+  background-color: var(--orange-light);
+  color: var(--white);
+}
+
+.output {
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  color: white;
+}
+.output h1 {
+  font-size: 30px;
+}
+
+/* Cursor Styling */
+.cursor:after {
+  content: "";
+  display: inline-block;
+  margin-left: 3px;
+  background-color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+h1 .cursor:after {
+  height: 24px;
+  width: 13px;
+}
+
+p .cursor:after {
+  height: 13px;
+  width: 6px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+  padding: 20px;
+}
+#contactForm input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+  transition: border-color 0.3s ease-in-out;
+}
+#contactForm input:not([type=submit]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s;
+}
+#contactForm input[type=submit] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 5px;
+}
+#contactForm input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+#contactForm input::placeholder .sendbtn {
+  border-radius: 10px;
+  background-color: var(--red-deep);
+}
+#contactForm .footer-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contactForm .footer-right i {
+  margin: 10px 10px;
+  color: #000;
+}
+#contactForm .footer-left .footer-links {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+#contactForm .footer-left .footer-links span {
+  margin: 0 4px;
+}
+#contactForm .footer-left .footer-links a {
+  color: #404040;
+  text-decoration: none;
+}
+#contactForm .footer-left .footer-links a .divider {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1px;
+  height: 15px;
+  margin: 10px 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=style.css.map */
